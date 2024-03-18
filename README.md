@@ -51,3 +51,4 @@ Replace `z011` with the server you launched your notebook on
 Replace `<username> with your ZLab username
 Replace '<group>` with `zusers` if you are in ZLab, `musers` if you are in Moore Lab, or `rusers` if you are a rotation student in either group 
 Access the notebook server from another terminal on your computer with `ssh -N -L 8888:<z011>:8888 <username>@z011`
+You can then open your notebook server in your favorite web browser by navigating to `localhost:8888`
