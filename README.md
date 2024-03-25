@@ -52,3 +52,14 @@ Replace `<username> with your ZLab username
 Replace '<group>` with `zusers` if you are in ZLab, `musers` if you are in Moore Lab, or `rusers` if you are a rotation student in either group 
 Access the notebook server from another terminal on your computer with `ssh -N -L 8888:<z011>:8888 <username>@z011`
 You can then open your notebook server in your favorite web browser by navigating to `localhost:8888`
+
+## Rootles Docker setup
+```
+mkdir -p ~/.config/docker/
+echo '{"data-root":"/rootless/docker/'$(whoami)'/docker"}' > ~/.config/docker/daemon.json
+dockerd-rootless-setuptool.sh install
+```
+## Jupyerlab server in docker
+```
+docker container run -it --rm -p 8888:8888 --mount type=bind,src=/data,target=/data --mount type=bind,src=/zata,target=/zata  andrewsg/bioinformatics jupyter-lab --port=8888 --ip=* --no-browser --allow-root --notebook-dir=/data/zusers/andrewsg/
+```
