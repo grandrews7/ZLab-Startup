@@ -1,7 +1,8 @@
 # ZLab-Startup
 
-## iTern2
+## iTerm2
 If you are on Mac, I prefer to user [iTerm2](https://iterm2.com/) as opposed to the stock terminal, it supports multiple tabs, is much more customizable, and has many additional features
+Make sure to change your key bindings to natural language processing
 
 
 ## Update ssh config file
