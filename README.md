@@ -42,6 +42,7 @@ If it's your first time, you will be prompted to scan the QR code with any two-f
 
 From bastion, you can then `ssh` into any of the ZLab servers, for example, `ssh z011`
 
+## Installing conda
 ## Build a pre-built container that has a host of bioinformatic software already installed
 `singularity build /zata/zippy/<username>/bin/bioinformatics.sif docker://andrewsg/bioinformatics`
 
