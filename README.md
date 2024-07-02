@@ -56,7 +56,7 @@ rm -rf /zata/zippy/<username>/miniconda3/miniconda.sh
 `singularity build /zata/zippy/<username>/bin/bioinformatics.sif docker://andrewsg/bioinformatics`
 
 ## Start JupyterLab server
-`singularity exec -B /data:/data -B /zata/:/zata/ /zata/zippy/andrewsg/bin/bioinformatics.sif jupyter-lab --port=8888 --ip=z011 --no-browser --notebook-dir=/data/<group>/<username>`
+`singularity exec -B /data:/data -B /zata/:/zata/ /zata/zippy/<username>/bin/bioinformatics.sif jupyter-lab --port=8888 --ip=z011 --no-browser --notebook-dir=/data/<group>/<username>`
 
 Replace `z011` with the server you launched your notebook on
 Replace `<username> with your ZLab username
