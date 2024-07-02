@@ -51,6 +51,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /z
 bash /zata/zippy/<username>/miniconda3/miniconda.sh -b -u -p /zata/zippy/<username>/miniconda3
 /zata/zippy/<username>/miniconda3/bin/conda init bash
 rm -rf /zata/zippy/<username>/miniconda3/miniconda.sh
+source /zata/zippy/<username>/miniconda3/etc/profile.d/conda.sh
 ```
 ## Build a pre-built container that has a host of bioinformatic software already installed
 `singularity build /zata/zippy/<username>/bin/bioinformatics.sif docker://andrewsg/bioinformatics`
