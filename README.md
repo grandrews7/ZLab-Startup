@@ -40,7 +40,7 @@ Host z010 z011 z012 z013 z014
 ```
 ## Logging in
 `ssh <username>@bastion.wenglab.org`
-If it's your first time, you will be prompted to scan the QR code with any two-factor authentication app (I prefer google authenticator but feel free to use any app you are comfortable with). You should also be prompted to change your password. From this point forward, everytime you login, you will provide your password + two-factor code with no spaces
+If it's your first time, you will be prompted to scan the QR code with any two-factor authentication app (I prefer google authenticator but feel free to use any app you are comfortable with). You should also be prompted to change your password. **From this point forward, everytime you login, you will provide your password + two-factor code with no spaces**
 
 From bastion, you can then `ssh` into any of the ZLab servers, for example, `ssh z011`
 
@@ -55,6 +55,7 @@ rm -rf /zata/zippy/<username>/miniconda3/miniconda.sh
 ```
 ## Build a pre-built container that has a host of bioinformatic software already installed
 `singularity build /zata/zippy/<username>/bin/bioinformatics.sif docker://andrewsg/bioinformatics`
+You will have to make that `bin` directory if it does not exist
 
 ## Start JupyterLab server
 `singularity exec -B /data:/data -B /zata/:/zata/ /zata/zippy/<username>/bin/bioinformatics.sif jupyter-lab --port=8888 --ip=z011 --no-browser --notebook-dir=/data/<group>/<username>`
