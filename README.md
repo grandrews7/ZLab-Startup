@@ -6,7 +6,7 @@ Make sure to change your key bindings to natural language processing
 
 ## WSL (Windows)
 If on windows, you will have to install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to launch a Linux VM from which you can SSH into the ZLab servers
-[WSL basic commands][https://learn.microsoft.com/en-us/windows/wsl/basic-commands]
+[WSL basic commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 ## Update ssh config file
 Your ssh config file should be placed in `~/.ssh/config`
 
