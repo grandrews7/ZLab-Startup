@@ -10,7 +10,7 @@ If on windows, you will have to install [WSL](https://learn.microsoft.com/en-us/
 [WSL basic commands](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)
 
 From your powershell start your linux VM with
-`wsl.exe -d ubuntu'
+`wsl.exe -d ubuntu`
 
 ## Update ssh config file
 Your ssh config file should be placed in `~/.ssh/config`
