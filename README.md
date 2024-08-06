@@ -62,9 +62,12 @@ rm -rf /zata/zippy/<username>/miniconda3/miniconda.sh
 /zata/zippy/<username>/miniconda3/bin/conda init bash
 ```
 Create your first conda environment
+
 ```conda create -n myenv jupyterlab numpy pandas matplotlib bedtools```
+
 Activate your environment
-```conda activate myenv
+
+```conda activate myenv```
 Start your jupyterlab server (assuming you are on z010)
 ```jupyter-lab --port=8888 --ip=z010 --no-browser```
 Access (ssh into) your running jupyter-lab server from another terminal on your local machine
