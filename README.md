@@ -49,7 +49,10 @@ If it's your first time, you will be prompted to scan the QR code with any two-f
 
 From bastion, you can then `ssh` into any of the ZLab servers, for example, `ssh z011`
 
-## Installing conda
+## Installing Software
+### conda
+Conda is a great way to quickly install software and create separate environments for projects requireing different, and potetially conflicting, pieces of software. The conda (miniconda) installation instructions have been adapted from default installation instructions so it is available across all our machines
+#### Install conda
 ```
 mkdir -p /zata/zippy/<username>/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /zata/zippy/<username>/miniconda3/miniconda.sh
@@ -58,6 +61,16 @@ bash /zata/zippy/<username>/miniconda3/miniconda.sh -b -u -p /zata/zippy/<userna
 rm -rf /zata/zippy/<username>/miniconda3/miniconda.sh
 /zata/zippy/<username>/miniconda3/bin/conda init bash
 ```
+Create your first conda environment
+```conda create -n myenv jupyterlab numpy pandas matplotlib bedtools```
+Activate your environment
+```conda activate myenv
+Start your jupyterlab server (assuming you are on z010)
+```jupyter-lab --port=8888 --ip=z010 --no-browser```
+Access (ssh into) your running jupyter-lab server from another terminal on your local machine
+```ssh -N -L 8888:z010:8888 andrewsg@z010```
+
+
 ## Build a pre-built container that has a host of bioinformatic software already installed
 `singularity build /zata/zippy/<username>/bin/bioinformatics.sif docker://andrewsg/bioinformatics`
 You will have to make that `bin` directory if it does not exist
